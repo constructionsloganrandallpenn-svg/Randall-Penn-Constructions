@@ -1,14 +1,13 @@
 # Randall-Penn Constructions Website
 
-Standalone migration of the approved Randall-Penn Constructions homepage previously hosted at:
-`https://organic-theory.vercel.app/randall-penn/homepage`
+Standalone website for Randall-Penn Constructions, Sydney.
 
-## Structure
-- `index.html` — homepage
-- `assets/css/homepage.css` — styles
-- `assets/js/homepage.js` — interactions and animation
-- `assets/images/` — all homepage image assets
-- `assets/video/Build.mp4` — build video
-- `vercel.json` — standalone Vercel configuration
+## Pages
+- `/` — Home
+- `/projects` — Projects
+- `/services` — Services
+- `/about` — About
+- `/media` — Media
+- `/contact` — Contact
 
-No Option 1 / Option 2 / Option 3 concept pages are included.
+The site is static HTML/CSS/JavaScript and is configured for Vercel clean URLs. Project imagery currently marked as illustrative must be replaced with approved Randall-Penn photography when supplied. The ABN is intentionally omitted until Logan confirms whether the website should display the sole-trader or Pty Ltd entity.

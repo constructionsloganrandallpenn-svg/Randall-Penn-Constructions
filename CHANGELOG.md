@@ -1,0 +1,20 @@
+# 2026-10-12 Multipage Build
+
+Added production pages:
+- Projects
+- Services
+- About
+- Media
+- Contact
+
+Homepage launch cleanup:
+- Removed `noindex,nofollow`
+- Replaced concept-only meta description
+- Updated main navigation, footer navigation and mobile navigation to real routes
+- Updated primary homepage CTAs to real pages
+- Added `robots.txt`
+
+Content notes:
+- Projects and Media use the Baulkham Hills renovation and limestone-hearth details supplied from Randall-Penn's own social posts.
+- No ABN is displayed until Logan confirms which active entity should be used publicly.
+- Existing homepage illustrative project imagery remains identified as illustrative in its project preview behavior.
