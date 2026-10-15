@@ -1,3 +1,12 @@
+
+# 2026-10-15 Client Presentation Revision
+
+- Reframed unfinished content as clear client-facing placeholders instead of internal production notes.
+- Added highlighted review notes for project photography, project details, services, About content, Media assets and testimonials.
+- Marked homepage and Services concept imagery clearly as placeholders.
+- Removed wording that sounded like an internal conversation about approvals, attribution, or content gathering.
+- Kept the existing site structure, navigation, animations and contact flow intact.
+
 # 2026-10-12 Multipage Build
 
 Added production pages:
