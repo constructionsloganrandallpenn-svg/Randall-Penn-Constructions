@@ -1,3 +1,11 @@
+# 2026-10-19 Calendly Brand + Favicon Revision
+
+- Reframed the inline Calendly booking experience in Randall-Penn brand styling.
+- Applied Randall-Penn background, text and primary colours to the Calendly embed.
+- Added a branded consultation header with 15-minute / phone-call context.
+- Added RP logo favicon assets for browsers and Apple touch icons.
+- Corrected the Contact form note and CTA to match the Resend-powered form.
+
 # 2026-10-19 Broader Services Positioning
 
 - Repositioned the homepage “What we do” section around Randall-Penn as an end-to-end project provider.

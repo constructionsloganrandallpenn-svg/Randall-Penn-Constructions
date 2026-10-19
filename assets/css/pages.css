@@ -20,17 +20,41 @@
 .placeholder-badge{top:18px;left:18px}.hero-placeholder-label{right:24px;bottom:24px}.work-card-placeholder{background:#f3efe1}.work-card-placeholder .presentation-note{margin-top:24px}
 @media(max-width:680px){.presentation-note{padding:16px 17px}.presentation-note-wide{margin-bottom:32px}.hero-placeholder-label{right:16px;bottom:16px}.placeholder-badge{top:14px;left:14px}}
 
-/* Calendly consultation */
-.calendly-section{background:#f4f2ec}
-.calendly-shell{background:#fff;border:1px solid var(--line);min-height:760px;overflow:hidden}
-.calendly-inline-widget{width:100%}
+
+/* Calendly consultation — Randall-Penn branded frame */
+.calendly-section{background:var(--ink);color:var(--white);position:relative;overflow:hidden}
+.calendly-section:before{content:"RP";position:absolute;right:-.04em;top:-.18em;font-size:clamp(220px,32vw,520px);line-height:1;font-weight:800;letter-spacing:-.1em;color:rgba(255,255,255,.018);pointer-events:none}
+.calendly-section .section-head{position:relative;z-index:1}
+.calendly-section .section-head p{color:#c7ccc5}
+.calendly-card{position:relative;z-index:1;border:1px solid rgba(255,255,255,.14);background:var(--ivory);box-shadow:0 28px 80px rgba(0,0,0,.24)}
+.calendly-brandbar{min-height:92px;padding:20px 24px;background:var(--forest);color:#fff;display:flex;align-items:center;justify-content:space-between;gap:24px;border-bottom:1px solid rgba(255,255,255,.12)}
+.calendly-brand{display:flex;align-items:center;gap:16px;min-width:0}
+.calendly-brand img{width:34px;height:40px;object-fit:contain}
+.calendly-brand div{display:grid;gap:5px}
+.calendly-brand span{font-size:9px;line-height:1.2;letter-spacing:.18em;font-weight:750;color:#c7d0c5}
+.calendly-brand strong{font-size:17px;line-height:1.2;letter-spacing:-.02em;font-weight:650}
+.calendly-meta{display:flex;align-items:center;gap:9px;flex-wrap:wrap;justify-content:flex-end}
+.calendly-meta span{border:1px solid rgba(255,255,255,.22);padding:8px 10px;font-size:9px;line-height:1;letter-spacing:.14em;font-weight:750;color:#eef1ec}
+.calendly-shell{background:var(--ivory);min-height:700px;overflow:hidden;padding:8px}
+.calendly-inline-widget{width:100%;background:var(--ivory)}
 .contact-layout>.rp-preview-note{margin-bottom:26px}
 .contact-layout>div>.rp-preview-note{margin-bottom:26px}
-@media(max-width:680px){
-  .calendly-shell{min-height:700px;margin-inline:-16px;border-left:0;border-right:0}
-  .calendly-inline-widget{height:700px!important}
-}
 
+@media(max-width:680px){
+  .calendly-section:before{font-size:230px;right:-30px;top:20px}
+  .calendly-card{margin-inline:-8px}
+  .calendly-brandbar{min-height:86px;padding:18px;align-items:flex-start}
+  .calendly-brand img{width:30px;height:36px}
+  .calendly-brand strong{font-size:15px}
+  .calendly-meta{gap:6px}
+  .calendly-meta span{font-size:8px;padding:7px 8px}
+  .calendly-shell{min-height:780px;padding:0}
+  .calendly-inline-widget{height:780px!important}
+}
+@media(max-width:430px){
+  .calendly-brandbar{display:grid;gap:14px}
+  .calendly-meta{justify-content:flex-start}
+}
 
 /* 2026-10-19 mobile correction */
 .arr,.mobile-links a span:last-child{font-family:Arial,Helvetica,sans-serif;font-variant-emoji:text}
