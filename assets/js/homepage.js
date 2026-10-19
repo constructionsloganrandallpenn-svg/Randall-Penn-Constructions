@@ -54,10 +54,12 @@ const modal=$("infoModal"),modalTitle=$("modalTitle"),modalEyebrow=$("modalEyebr
 function openModal({title,eyebrow,copy,img,tags,contact=false}){if(!modal)return;modalTitle.textContent=title;modalEyebrow.textContent=eyebrow;modalCopy.textContent=copy;if(img){modalPhoto.src=img;modalPhoto.alt="Illustrative project photography";modalPhoto.hidden=false}else{modalPhoto.hidden=true;modalPhoto.removeAttribute("src")}modalTags.replaceChildren();(tags||[]).forEach(t=>{const el=document.createElement("span");el.className="modal-tag";el.textContent=t;modalTags.appendChild(el)});modalSocials.hidden=!contact;modalAction.hidden=contact;modal.showModal();body.classList.add("modal-open");$("modalClose")?.focus()}
 function openProject(i){const p=projects[i];openModal({title:p.title,eyebrow:p.kind+" / PROJECT PLACEHOLDER",copy:p.description+" This preview shows where the final project story will sit once the actual photos and details are added.",img:p.image,tags:["Photo placeholder","Project details to add"]})}
 const serviceText={
- "Residential construction":"This is part of the current draft service list. We’ll update the wording and examples once you send through your complete list of services.",
- "Renovations & upgrades":"This is part of the current draft service list. We’ll update the wording and examples once you send through your complete list of services.",
- "Extensions & additions":"This is part of the current draft service list. We’ll update the wording and examples once you send through your complete list of services.",
- "Outdoor living & carpentry":"This is part of the current draft service list. We’ll update the wording and examples once you send through your complete list of services."
+ "Construction & renovations":"Residential construction and renovation work brought together around the home, the brief and the finish required.",
+ "Extensions & additions":"Additional space planned and built to work naturally with the existing home.",
+ "Landscaping & outdoor works":"Landscaping and outdoor works that help carry the project beyond the building itself and into the surrounding property.",
+ "Site preparation & clearing":"Practical site preparation and clearing to get the work area ready for the next stage of the project.",
+ "Site clean-up & waste removal":"Construction waste, offcuts and general site rubbish cleared as part of keeping the job moving and leaving the site in order.",
+ "Carpentry & finishing works":"Carpentry, detailing and finishing works that bring the final stages of the project together."
 };
 document.querySelectorAll("[data-service]").forEach(el=>el.addEventListener("click",()=>{const title=el.dataset.service;openModal({title,eyebrow:"WHAT WE DO / SERVICE PREVIEW",copy:serviceText[title]||"This service is part of the current draft list and will be updated once the complete service list is confirmed.",tags:["Service list to confirm"]})}));
 function openAbout(){openModal({title:"About Randall-Penn",eyebrow:"THE PERSON BEHIND THE WORK",copy:"This section introduces the person behind Randall-Penn Constructions. We’ll expand it with your background, experience and any other details you want customers to know.",tags:["About details to add"]})}

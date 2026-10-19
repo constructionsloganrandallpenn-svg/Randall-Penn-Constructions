@@ -1,3 +1,10 @@
+# 2026-10-19 Broader Services Positioning
+
+- Repositioned the homepage “What we do” section around Randall-Penn as an end-to-end project provider.
+- Added construction & renovations, extensions & additions, landscaping & outdoor works, site preparation & clearing, site clean-up & waste removal, and carpentry & finishing works.
+- Expanded the Services page to reinforce “One project. One point of contact.”
+- Updated service-page and homepage metadata to reflect the broader offering.
+
 # 2026-10-19 Calendly + Resend Integration
 
 - Corrected the Calendly consultation duration to 15 minutes.
