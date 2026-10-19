@@ -1,3 +1,12 @@
+# 2026-10-19 Calendly + Resend Integration
+
+- Corrected the Calendly consultation duration to 15 minutes.
+- Kept the inline Calendly consultation embed on the Contact page.
+- Added `/api/contact` as a Vercel serverless endpoint for Resend.
+- Wired the existing contact form to the API with loading, success and error states.
+- Added a honeypot field for basic bot filtering.
+- Kept recipient, sender and Resend API key out of the repository via Vercel environment variables.
+- If Resend is not configured yet, visitors are directed to the consultation booking option.
 
 # 2026-10-15 Client Presentation Revision
 

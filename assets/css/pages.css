@@ -19,3 +19,14 @@
 .placeholder-visual{position:relative}.placeholder-badge,.hero-placeholder-label{position:absolute;z-index:4;background:#e7e1cd;color:#283329;border:1px solid rgba(40,51,41,.22);font-size:9px;font-weight:800;letter-spacing:.14em;text-transform:uppercase;padding:9px 11px;box-shadow:0 8px 25px rgba(0,0,0,.12)}
 .placeholder-badge{top:18px;left:18px}.hero-placeholder-label{right:24px;bottom:24px}.work-card-placeholder{background:#f3efe1}.work-card-placeholder .presentation-note{margin-top:24px}
 @media(max-width:680px){.presentation-note{padding:16px 17px}.presentation-note-wide{margin-bottom:32px}.hero-placeholder-label{right:16px;bottom:16px}.placeholder-badge{top:14px;left:14px}}
+
+/* Calendly consultation */
+.calendly-section{background:#f4f2ec}
+.calendly-shell{background:#fff;border:1px solid var(--line);min-height:760px;overflow:hidden}
+.calendly-inline-widget{width:100%}
+.contact-layout>.rp-preview-note{margin-bottom:26px}
+.contact-layout>div>.rp-preview-note{margin-bottom:26px}
+@media(max-width:680px){
+  .calendly-shell{min-height:700px;margin-inline:-16px;border-left:0;border-right:0}
+  .calendly-inline-widget{height:700px!important}
+}
