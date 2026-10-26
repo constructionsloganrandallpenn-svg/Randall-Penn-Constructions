@@ -51,3 +51,11 @@ Content notes:
 - Projects and Media use the Baulkham Hills renovation and limestone-hearth details supplied from Randall-Penn's own social posts.
 - No ABN is displayed until Logan confirms which active entity should be used publicly.
 - Existing homepage illustrative project imagery remains identified as illustrative in its project preview behavior.
+
+## 2026-10-26 - Real content and media library
+- Replaced presentation placeholders with Logan Randall-Penn supplied project, service and about content.
+- Added real project photography groupings for Paddington, Baulkham Hills, Vaucluse, Marrickville and Five Dock.
+- Rebuilt Media as project films plus a neutral site journal for unassigned photos.
+- Updated public location to Mount Colah, added ABN 91 691 188 208 and new canonical domain metadata.
+- Added sitemap.xml and updated robots.txt.
+- Calendly and Resend/contact API configuration intentionally unchanged.
