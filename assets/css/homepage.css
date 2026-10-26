@@ -150,3 +150,22 @@ footer{background:var(--ink);color:#f6f4ee;padding:clamp(65px,7vw,120px) 0 27px}
 .testimonial-card footer span{font-size:10px;letter-spacing:.14em;text-transform:uppercase}
 @media(max-width:900px){.testimonials-inner{grid-template-columns:1fr}.testimonials-head{position:static}.testimonial-card{min-height:0}}
 @media(max-width:600px){.testimonial-card{padding:28px 24px}.testimonial-card blockquote{font-size:16px}.testimonial-mark{font-size:60px}}
+
+/* 2026-10-26 UI refinement: compact horizontal testimonials + consistent CTA silhouette */
+.testimonials{padding:clamp(68px,7vw,108px) 0;overflow:hidden}
+.testimonials-inner{display:block}
+.testimonials-head{position:static;max-width:760px;margin-bottom:38px}
+.testimonials-head h2{margin-bottom:16px}
+.testimonials-head p{max-width:620px}
+.testimonial-grid{display:grid;grid-auto-flow:column;grid-auto-columns:minmax(430px,1fr);grid-template-columns:none;gap:18px;overflow-x:auto;overscroll-behavior-inline:contain;scroll-snap-type:x proximity;padding:0 0 14px;scrollbar-width:thin;scrollbar-color:#899188 #dedfd9}
+.testimonial-grid::-webkit-scrollbar{height:8px}
+.testimonial-grid::-webkit-scrollbar-track{background:#dedfd9}
+.testimonial-grid::-webkit-scrollbar-thumb{background:#899188;border-radius:99px}
+.testimonial-card{scroll-snap-align:start;min-height:0;height:auto;padding:30px 32px 27px;display:grid;grid-template-rows:auto 1fr auto}
+.testimonial-mark{font-size:55px;margin-bottom:12px}
+.testimonial-card blockquote{font-size:15px;line-height:1.7}
+.testimonial-card footer{margin-top:24px;padding-top:18px;border-top:1px solid #c9cec6;display:flex;align-items:center;justify-content:space-between;gap:18px}
+.testimonial-card footer strong{font-size:15px;color:#202520}
+.testimonial-card footer span{font-size:10px;letter-spacing:.14em;text-transform:uppercase;color:#747d75;font-weight:750}
+.soft-btn{border-radius:2px 31px 2px 2px}
+@media(max-width:760px){.testimonials{padding:64px 0}.testimonials-head{margin-bottom:28px}.testimonial-grid{grid-auto-columns:min(88vw,420px)}.testimonial-card{padding:26px 24px}.testimonial-card footer{align-items:flex-start;flex-direction:column;gap:4px}}
