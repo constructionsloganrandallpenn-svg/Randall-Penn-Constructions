@@ -40,3 +40,16 @@ if(form){
   });
 }
 })();
+
+// Media journal progressive reveal + lightbox
+const mediaItems=[...document.querySelectorAll('[data-media-item]')];
+const mediaMore=document.querySelector('[data-media-more]');
+let mediaVisible=24;
+const syncMediaMore=()=>{if(!mediaMore)return;mediaMore.hidden=mediaVisible>=mediaItems.length;};
+mediaMore?.addEventListener('click',()=>{mediaItems.slice(mediaVisible,mediaVisible+24).forEach(el=>{const img=el.querySelector('img[data-src]');if(img){img.src=img.dataset.src;img.removeAttribute('data-src');}el.classList.remove('is-hidden');});mediaVisible+=24;syncMediaMore();});
+syncMediaMore();
+const lightbox=document.querySelector('[data-lightbox-dialog]');
+const lightboxImage=document.querySelector('[data-lightbox-image]');
+mediaItems.forEach(item=>item.addEventListener('click',()=>{if(!lightbox||!lightboxImage)return;lightboxImage.src=item.dataset.src||item.querySelector('img')?.src||'';lightbox.showModal();}));
+document.querySelector('[data-lightbox-close]')?.addEventListener('click',()=>lightbox?.close());
+lightbox?.addEventListener('click',e=>{if(e.target===lightbox)lightbox.close();});

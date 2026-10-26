@@ -130,3 +130,6 @@ footer{background:var(--ink);color:#f6f4ee;padding:clamp(65px,7vw,120px) 0 27px}
   .hero h1{font-size:35px}
   .hero-actions{flex-wrap:wrap}
 }
+
+/* 2026-10-26 real project content */
+.featured-image:not(.placeholder-visual) img{filter:none}
