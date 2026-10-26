@@ -169,3 +169,15 @@ footer{background:var(--ink);color:#f6f4ee;padding:clamp(65px,7vw,120px) 0 27px}
 .testimonial-card footer span{font-size:10px;letter-spacing:.14em;text-transform:uppercase;color:#747d75;font-weight:750}
 .soft-btn{border-radius:2px 31px 2px 2px}
 @media(max-width:760px){.testimonials{padding:64px 0}.testimonials-head{margin-bottom:28px}.testimonial-grid{grid-auto-columns:min(88vw,420px)}.testimonial-card{padding:26px 24px}.testimonial-card footer{align-items:flex-start;flex-direction:column;gap:4px}}
+
+/* Testimonial author footer visibility fix */
+.testimonial-card > footer{background:transparent!important;color:#5f675f!important;padding:18px 0 0!important;margin-top:24px!important;border-top:1px solid #c9cec6!important;display:flex!important;align-items:center!important;justify-content:space-between!important;gap:18px!important}
+.testimonial-card > footer strong{color:#202520!important;font-size:15px!important;font-weight:800!important}
+.testimonial-card > footer span{color:#687168!important;font-size:10px!important;letter-spacing:.14em!important;text-transform:uppercase!important;font-weight:750!important}
+@media(max-width:760px){.testimonial-card > footer{align-items:flex-start!important;flex-direction:column!important;gap:4px!important}}
+
+/* Testimonial author footer visibility fix */
+.testimonial-card > footer{background:transparent!important;color:#5f675f!important;padding:18px 0 0!important;margin-top:24px!important;border-top:1px solid #c9cec6!important;display:flex!important;align-items:center!important;justify-content:space-between!important;gap:18px!important}
+.testimonial-card > footer strong{color:#202520!important;font-size:15px!important;font-weight:800!important}
+.testimonial-card > footer span{color:#687168!important;font-size:10px!important;letter-spacing:.14em!important;text-transform:uppercase!important;font-weight:750!important}
+@media(max-width:760px){.testimonial-card > footer{align-items:flex-start!important;flex-direction:column!important;gap:4px!important}}
