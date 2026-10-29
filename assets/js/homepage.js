@@ -152,4 +152,23 @@ if(!reduced && "IntersectionObserver" in window){
   document.querySelectorAll(".motion-reveal").forEach(el=>revealObserver.observe(el));
 }
 $("year").textContent=String(new Date().getFullYear());
+
+/* Compact testimonial carousel */
+const reviewTrack=document.querySelector('.testimonial-grid');
+if(reviewTrack){
+  const reviewCards=[...reviewTrack.querySelectorAll('[data-testimonial-card]')];
+  const prevReview=document.querySelector('[data-testimonial-prev]');
+  const nextReview=document.querySelector('[data-testimonial-next]');
+  let reviewIndex=0,reviewTimer=null,reviewPaused=false;
+  const reviewGo=(index,behavior='smooth')=>{if(!reviewCards.length)return;reviewIndex=(index+reviewCards.length)%reviewCards.length;const card=reviewCards[reviewIndex];reviewTrack.scrollTo({left:card.offsetLeft-reviewTrack.offsetLeft,behavior:reduced?'auto':behavior})};
+  const reviewStop=()=>{clearInterval(reviewTimer);reviewTimer=null};
+  const reviewStart=()=>{if(reduced||reviewPaused||reviewCards.length<2)return;reviewStop();reviewTimer=setInterval(()=>reviewGo(reviewIndex+1),4800)};
+  prevReview?.addEventListener('click',()=>{reviewGo(reviewIndex-1);reviewStart()});
+  nextReview?.addEventListener('click',()=>{reviewGo(reviewIndex+1);reviewStart()});
+  let scrollSync;reviewTrack.addEventListener('scroll',()=>{clearTimeout(scrollSync);scrollSync=setTimeout(()=>{let closest=0,distance=Infinity;reviewCards.forEach((card,i)=>{const d=Math.abs(card.offsetLeft-reviewTrack.offsetLeft-reviewTrack.scrollLeft);if(d<distance){distance=d;closest=i}});reviewIndex=closest},90)},{passive:true});
+  const pause=()=>{reviewPaused=true;reviewStop()};const resume=()=>{reviewPaused=false;reviewStart()};
+  reviewTrack.addEventListener('mouseenter',pause);reviewTrack.addEventListener('mouseleave',resume);reviewTrack.addEventListener('focusin',pause);reviewTrack.addEventListener('focusout',e=>{if(!reviewTrack.contains(e.relatedTarget))resume()});reviewTrack.addEventListener('pointerdown',pause,{passive:true});reviewTrack.addEventListener('pointerup',resume,{passive:true});
+  reviewTrack.querySelectorAll('[data-review-more]').forEach(btn=>btn.addEventListener('click',()=>{const card=btn.closest('[data-testimonial-card]');const expanded=card.classList.toggle('is-expanded');btn.setAttribute('aria-expanded',String(expanded));btn.textContent=expanded?'Show less':'Read more';if(expanded)pause();else resume()}));
+  reviewStart();
+}
 })();
